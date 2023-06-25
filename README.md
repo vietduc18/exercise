@@ -1,41 +1,41 @@
-// build tool -> tool chain
-// vite
+# NPM (Node Package Manager)
 
-// cau lenh cmd
-// tao project (tao thu muc du an tai duong dan hien tai)
-// npm i create vite@latest
+- là một công cụ quản lý gói phần mềm cho Node.js. Nó cho phép bạn tải về, cài đặt, và quản lý các gói phụ thuộc trong dự án của bạn.
+- Dưới đây là một số câu lệnh cơ bản khi sử dụng NPM:
+  . npm init : khởi tạo một dự án mới
+  . npm install: cài đặt một gói phụ thuộc vào dự án
+  . npm install -g <package-name>: Cài đặt gói phụ thuộc toàn cục
+  . npm uninstall: xóa gói phụ thuộc vào dự án
+  . npm update: cập nhật và kiểm tra dự án
 
-// cai dat cac packet da dc
+## tệp package.json
 
-// cau truc thu muc
-// node_modules => thu muc cai dat dependencies
-// public => chon cac files tinh cho pheop truy cap truc tiep
-// src => chua cac sources code du an
+- là một tệp cấu hình trong dự án Node.js, chứa thông tin về dự án của bạn và các cài đặt liên quan đến gói phụ thuộc, scripts, và thông tin khác.
+- 1 số thông tin ở trong tệp:
+  . name: Tên của dự án.
+  . version: Phiên bản hiện tại của dự án.
+  . description: Mô tả ngắn về dự án.
+  . main: Tệp chính (entry point) của ứng dụng.
+  . scripts: Một đối tượng chứa các lệnh thực thi bằng NPM. Ví dụ: start, test, build.
+  . dependencies: Danh sách các gói phụ thuộc cần thiết để chạy ứng dụng trong môi trường sản phẩm.
+  . devDependencies: Danh sách các gói phụ thuộc cần thiết chỉ trong quá trình phát triển, ví dụ như các công cụ testing, linting, hay build tools.
+  . engines: Phiên bản của Node.js và các phiên bản runtime hỗ trợ.
+  . author: Tác giả hoặc tác giả của dự án.
+  . license: Giấy phép sử dụng cho dự án.
 
-// ES6 Modules
-// co moi file (.) la mot module, va co context rieng, khong anh huong den nhau
-// de lien cac module su dung cup phap (import / export)
-// .exprot (xuat ra nhung gia tri, phuong thuc,... cho phep cac module khac co the truy cap duoc)
-// .import (nhap/ truy cap vao cac gia tri, phuong thuc,.. duoc khai bao va exprot trong cac export khac)
+### jSX
 
+- là một phần quan trọng trong React, nó cho phép bạn viết mã HTML tương tự trong JavaScript.
 
-// Export 
-// export/import default : moi module chi duoc phep export default 1 gia tri
-// export/import theo ten : theo dung gia tri ten
+1. Cú pháp:
+   JSX được viết bên trong cặp dấu ngoặc nhọn {}.
+   Các thành phần JSX được bao quanh bởi một cặp thẻ mở và đóng, ví dụ: <div></div>.
+   Có thể sử dụng các thuộc tính HTML bình thường trong JSX, ví dụ: <div id="myId" className="myClass"></div>.
+   Có thể chèn giá trị biến hoặc biểu thức vào trong JSX bằng cách sử dụng cặp dấu ngoặc nhọn {}.
+   JSX hỗ trợ việc render danh sách, ví dụ: {items.map(item => <li key={item.id}>{item.name}</li>)}.
 
-// Tinh nang
-/** 
- * 1. JSX
- * 2. Component-based => la mot ham tra ve 1 doan JSX xac dinh noi dung hien thi tren man hinh
- * 3. Virtual DOM
- * 4. Ho tro da nen tang
- * 
- * Nhuoc diem cua DOM thuan:
- * . Cac thao tac cuc ky ton kem
- * 
- * Virtual DOM la mo hinh doi tuong dai dien cho cau truc tuong ung voi DOM that nhung ma trong bo nho 
- * 
- * JSX 
- * Cac luu y khi su dung cu phap JSX:
- * . Cu phap mo rong 
- */
+2. Lưu ý khi sử dụng JSX:
+   Tên thành phần JSX phải bắt đầu bằng chữ cái viết hoa. Ví dụ: <MyComponent /> chứ không phải <myComponent />.
+   Nếu bạn muốn sử dụng các thuộc tính như class (thay vì className), bạn cần sử dụng className trong JSX. Điều này là do class là một từ khóa trong JavaScript.
+   Mỗi thành phần JSX phải có một thành phần cha bao quanh, chẳng hạn như một thẻ <div>. Nếu bạn không muốn có một thẻ cha, bạn có thể sử dụng các cú pháp như <React.Fragment> hoặc viết ngắn gọn thành <>...</> để bao quanh các thành phần con.
+   Để tránh lỗi xảy ra khi render danh sách các thành phần trong JSX, hãy đảm bảo rằng mỗi thành phần có một thuộc tính key duy nhất. Thuộc tính key giúp React xác định sự khác biệt giữa các thành phần trong danh sách.
